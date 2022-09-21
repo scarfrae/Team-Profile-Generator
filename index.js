@@ -27,45 +27,45 @@ const AskManager = () => {
 
         {
             type: "input",
-            message: "What is the manager's name?",
-            name: "managerName",
+            message: "What is the employee ID?",
+            name: "ID",
             // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
-            validate: managerInput => {
-                if(managerInput){
+            validate: IDInput => {
+                if(IDInput){
                     return true;
                 }
                 else{
-                    console.log("Please enter manager's name!")
+                    console.log("Please enter employee's ID!")
                     return false;
                 }
             }
         },
         {
             type: "input",
-            message: "What is the manager's name?",
-            name: "managerName",
+            message: "What is the manager's email?",
+            name: "managerEmail",
             // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
-            validate: managerInput => {
-                if(managerInput){
+            validate: managerEmailInput => {
+                if(managerEmailInput){
                     return true;
                 }
                 else{
-                    console.log("Please enter manager's name!")
+                    console.log("Please enter manager's email!")
                     return false;
                 }
             }
         },
         {
             type: "input",
-            message: "What is the manager's name?",
-            name: "managerName",
+            message: "What is the manager's office number?",
+            name: "managerOfficeNum",
             // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
-            validate: managerInput => {
-                if(managerInput){
+            validate: managerOfficeNumInput => {
+                if(managerOfficeNumInput){
                     return true;
                 }
                 else{
-                    console.log("Please enter manager's name!")
+                    console.log("Please enter manager's office number!")
                     return false;
                 }
             }
