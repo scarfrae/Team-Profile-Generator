@@ -24,7 +24,6 @@ const AskManager = () => {
             }
 
         },
-
         {
             type: "input",
             message: "What is the employee ID?",
