@@ -1,15 +1,24 @@
 // Intializiation tests
-const Employee = require("../Employee");
+const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
+    //test for name
     describe("Initialization", () => {
-        it("should return an object containing a name")
-        const object = new Employee();
+        it("should return an object containing a name", () => {
+            const nameInput = 'Bob';
+        const object = new Employee(nameInput);
 
-        expect("name" in object).toEqual(true);
+        expect(object.name == 'Bob').toEqual(true);
+        })
+
+        it("should also have an id property", () => {
+            const idInput = '0935';
+            const object = new Employee('Bob', idInput);
+            expect(object.id == '0935').toEqual(true);
+        })
+        //one more in same style
     });
 
-    it("should set 'name' ")
 })
 
     // Testing the constructor
