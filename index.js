@@ -1,9 +1,10 @@
-//run application 
+//require 'inquirer'
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-//need to enter team manager's name, employee id, email address, and office number
+//require lib
 
+//need to enter team manager's name, employee id, email address, and office number
 //need to save manager info into variable for printing in html later
 const AskManager = () => {
     inquirer    
@@ -64,11 +65,29 @@ const AskManager = () => {
                     return true;
                 }
                 else{
-                    console.log("Please enter manager's office number!")
+                    console.log("Please enter a positive number greater than 0!")
+                    return false;
+                }
+            }
+        },
+        {
+            type: "list",
+            message: "Which team member do you want to add?",
+            name: "memberOption",
+            choices: ['Manager', 'Engineer', 'Intern'],
+            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            validate: TeamMemberInput => {
+                if(TeamMemberInput){
+                    return true;
+                }
+                else{
+                    console.log("Please enter a positive number greater than 0!")
                     return false;
                 }
             }
         }
+
+
     ])
     .then((response) => {
         console.log(response);
