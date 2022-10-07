@@ -7,6 +7,8 @@
 //take array and inject it into final html template
 //return html template
 
+
+
 const ManagerCard = (data) => {
     return`
     <div class="card" style="width: 18rem;">
@@ -49,12 +51,52 @@ const InternCard = (data) => {
     ` 
 }
 
-const FilterArray = (EmployeeArray) => {
-    const result = words.filter(word => word.length > 6);
+let FilterArray = (EmployeeArray) => {
+    const employeeEngineer = EmployeeArray.filter(employee => employee.getRole() === 'Engineer');
+    const employeeIntern = EmployeeArray.filter(employee => employee.getRole() === 'Intern');
+    const employeeManager = EmployeeArray.filter(employee => employee.getRole() === 'Manager');
 // 1. split each employee based on type it is
 // 2. take array of employee type and send each element through html card function
+var engineerCards = employeeEngineer.map(function(engineer) { 
+    //take each engineer and send through html card function
+    EngineerCard(engineer);
+  });
+  var managerCards = employeeManager.map(function(manager) { 
+    //take each engineer and send through html card function
+    ManagerCard(manager);
+  });
+  var internCards = employeeIntern.map(function(intern) { 
+    //take each engineer and send through html card function
+    InternCard(intern);
+  });
+
+
+var EmployeeInformation = [];
+EmployeeInformation.push(engineerCards,managerCards, internCards);
+return EmployeeInformation;
+  
 // 3. take all arrays and put into <body> of final html template
 // 4. write the function to html
 }
 
+
+function generateMarkdown(data) {
+    
+    return
+
+    `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+${FilterArray(EmployeeInformation)}
+</body>
+</html>
+  `
+}
 //export function that creates final html
+module.exports = generateMarkdown;
