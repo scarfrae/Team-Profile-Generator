@@ -81,10 +81,9 @@ return EmployeeInformation;
 
 
 function generateMarkdown(data) {
-    
-    return
-
-    `<!DOCTYPE html>
+    let EI = FilterArray(EmployeeInformation);
+    return `
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,10 +92,10 @@ function generateMarkdown(data) {
     <title>Document</title>
 </head>
 <body>
-${FilterArray(EmployeeInformation)}
+${EI}
 </body>
 </html>
   `
 }
 //export function that creates final html
-module.exports = generateMarkdown;
+module.exports = generateMarkdown();

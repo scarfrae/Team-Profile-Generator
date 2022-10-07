@@ -7,7 +7,7 @@ const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 
-//require page_template js
+const generateMarkdown = require('./src/page.template.js')
 
 var EmployeeInfoList = [];
 
@@ -289,7 +289,7 @@ let AddIntern = () => {
 
 AskManager();
 
-const FinishedTeam = () => {
+const FinishedTeam = (data) => {
     // TODO: Create a function to write README file
 
     //write to README.md with anything I pass into readMeInfo
