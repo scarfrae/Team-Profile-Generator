@@ -81,6 +81,7 @@ const AskManager = () => {
     .then((response) => {
         const manager = new Manager(response.managerName, response.ID, response.managerEmail, response.managerOfficeNum);
         EmployeeInfoList.push(manager);
+        console.log(EmployeeInfoList);
         OptionMenu();
     })
 
@@ -116,7 +117,8 @@ const OptionMenu = () => {
             AddIntern();
         }
         else {
-            FinishedTeam();
+            console.log(EmployeeInfoList);
+            FinishedTeam(EmployeeInfoList);
         }
     })
 
@@ -289,11 +291,11 @@ let AddIntern = () => {
 
 AskManager();
 
-const FinishedTeam = (data) => {
+const FinishedTeam = (EmployeeInfoList) => {
     // TODO: Create a function to write README file
 
     //write to README.md with anything I pass into readMeInfo
-    let GeneratedHTML = generateMarkdown(data);
+    let GeneratedHTML = generateMarkdown(EmployeeInfoList);
     fs.writeFile("dist/index.html", GeneratedHTML, (err) =>
     err ? console.error(err) : console.log('Success!')
     );

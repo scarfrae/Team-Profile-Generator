@@ -7,8 +7,6 @@
 //take array and inject it into final html template
 //return html template
 
-
-
 const ManagerCard = (data) => {
     return`
     <div class="card" style="width: 18rem;">
@@ -50,9 +48,10 @@ const InternCard = (data) => {
     </div>
     ` 
 }
-
+var EmployeeInformation = [];
 let FilterArray = (EmployeeArray) => {
     const employeeEngineer = EmployeeArray.filter(employee => employee.getRole() === 'Engineer');
+    console.log(employeeEngineer);
     const employeeIntern = EmployeeArray.filter(employee => employee.getRole() === 'Intern');
     const employeeManager = EmployeeArray.filter(employee => employee.getRole() === 'Manager');
 // 1. split each employee based on type it is
@@ -60,6 +59,7 @@ let FilterArray = (EmployeeArray) => {
 var engineerCards = employeeEngineer.map(function(engineer) { 
     //take each engineer and send through html card function
     EngineerCard(engineer);
+    console.log(EngineerCard(engineer))
   });
   var managerCards = employeeManager.map(function(manager) { 
     //take each engineer and send through html card function
@@ -71,8 +71,9 @@ var engineerCards = employeeEngineer.map(function(engineer) {
   });
 
 
-var EmployeeInformation = [];
+// var EmployeeInformation = [];
 EmployeeInformation.push(engineerCards,managerCards, internCards);
+console.log(EmployeeInformation);
 return EmployeeInformation;
   
 // 3. take all arrays and put into <body> of final html template
