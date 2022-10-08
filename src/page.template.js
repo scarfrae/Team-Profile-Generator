@@ -80,8 +80,10 @@ return EmployeeInformation;
 }
 
 
-function generateMarkdown(data) {
+function generateMarkdown() {
+    
     let EI = FilterArray(EmployeeInformation);
+    console.log(EI);
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -98,4 +100,4 @@ ${EI}
   `
 }
 //export function that creates final html
-module.exports = generateMarkdown();
+module.exports = generateMarkdown;
