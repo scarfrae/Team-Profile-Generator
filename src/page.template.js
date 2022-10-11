@@ -51,40 +51,48 @@ const InternCard = (data) => {
 var EmployeeInformation = [];
 let FilterArray = (EmployeeArray) => {
     const employeeEngineer = EmployeeArray.filter(employee => employee.getRole() === 'Engineer');
-    console.log(employeeEngineer);
+    console.log('filter infoE:', employeeEngineer);
     const employeeIntern = EmployeeArray.filter(employee => employee.getRole() === 'Intern');
+    console.log('filter infoI:', employeeIntern);
     const employeeManager = EmployeeArray.filter(employee => employee.getRole() === 'Manager');
+    console.log('filter infoM:', employeeManager);
 // 1. split each employee based on type it is
 // 2. take array of employee type and send each element through html card function
 var engineerCards = employeeEngineer.map(function(engineer) { 
+    
     //take each engineer and send through html card function
-    EngineerCard(engineer);
-    console.log(EngineerCard(engineer))
+    return EngineerCard(engineer);
+    console.log('EngineerCard', EngineerCard(engineer))
   });
+  console.log('engineerCards', engineerCards)
   var managerCards = employeeManager.map(function(manager) { 
     //take each engineer and send through html card function
-    ManagerCard(manager);
+    return ManagerCard(manager);
+    
   });
+  console.log('managerCards', managerCards)
   var internCards = employeeIntern.map(function(intern) { 
     //take each engineer and send through html card function
-    InternCard(intern);
+    return InternCard(intern);
   });
+  console.log('internCards', internCards)
 
 
 // var EmployeeInformation = [];
 EmployeeInformation.push(engineerCards,managerCards, internCards);
-console.log(EmployeeInformation);
-return EmployeeInformation;
+console.log('EmployeeInformation', EmployeeInformation);
+const newEmployeeInfoArray = EmployeeInformation.join('');
+return newEmployeeInfoArray;
   
 // 3. take all arrays and put into <body> of final html template
 // 4. write the function to html
 }
 
 
-function generateMarkdown() {
-    
-    let EI = FilterArray(EmployeeInformation);
-    console.log(EI);
+function generateMarkdown(data) {
+    console.log('employee info', data)
+    let EI = FilterArray(data);
+    console.log('filterData', EI);
     return `
     <!DOCTYPE html>
 <html lang="en">

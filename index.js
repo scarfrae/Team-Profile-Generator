@@ -117,7 +117,6 @@ const OptionMenu = () => {
             AddIntern();
         }
         else {
-            console.log(EmployeeInfoList);
             FinishedTeam(EmployeeInfoList);
         }
     })
@@ -266,10 +265,10 @@ let AddIntern = () => {
         {
             type: "input",
             message: "What is the intern's school?",
-            name: "internGitHub",
+            name: "internSchool",
             // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
-            validate: internGitHub => {
-                if(internGitHub){
+            validate: internSchool => {
+                if(internSchool){
                     return true;
                 }
                 else{
