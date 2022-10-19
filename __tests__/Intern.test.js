@@ -5,16 +5,20 @@ describe("Intern", () => {
     describe("Initialization", () => {
         it("should return an object containing a name", () => {
             const nameInput = 'Bob';
-        const object = Intern(nameInput);
+        const object = new Intern(nameInput);
 
-        expect(object.name == 'Bob').toEqual(true);
+        expect(object.name).toEqual('Bob');
         })
+    });
+    describe("ID", () => {
 
         it("should also have an id property", () => {
             const idInput = '0935';
             const object = new Intern('Bob', idInput);
-            expect(object.id == '0935').toEqual(true);
+            expect(object.id).toEqual('0935');
         })
+        //one more in same style
+    });
         //for get office num etc.
         // it("should also have a school property", () => {
         //     const SchoolInput = 'Mount Vernon High School';
@@ -22,6 +26,6 @@ describe("Intern", () => {
         //     expect(object.school == 'Mount Vernon High School').toEqual(true);
         // })
         //one more in same style
-    });
+    
 
 })

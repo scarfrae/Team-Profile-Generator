@@ -8,13 +8,15 @@ describe("Employee", () => {
             const nameInput = 'Bob';
         const object = new Employee(nameInput);
 
-        expect(object.name == 'Bob').toEqual(true);
+        expect(object.name).toEqual('Bob');
         })
+    });
+    describe("ID", () => {
 
         it("should also have an id property", () => {
             const idInput = '0935';
             const object = new Employee('Bob', idInput);
-            expect(object.id == '0935').toEqual(true);
+            expect(object.id).toEqual('0935');
         })
         //one more in same style
     });
