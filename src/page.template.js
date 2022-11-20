@@ -9,17 +9,18 @@
 
 const ManagerCard = (data) => {
     return`
-
-        <div class="card col-xs-6 col-sm-6 col-md-4">
-            <div class="card-body">
+        <div class="card col-xs-6 col-sm-6 col-md-4 mt-1">
+            <div class="card-header">
                 <h5 class="card-title titleSection">${data.getName()}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+                <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${data.getId()}</li>
-                <li class="list-group-item">Email: ${data.getEmail()}</li>
-                <li class="list-group-item">Office Number: ${data.getOfficeNum()}</li>
-            </ul>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${data.getId()}</li>
+                    <li class="list-group-item">Email: ${data.getEmail()}</li>
+                    <li class="list-group-item">Office Number: ${data.getOfficeNum()}</li>
+                </ul>
+            </div>
         </div>
     ` 
 }
@@ -27,16 +28,18 @@ const ManagerCard = (data) => {
 const EngineerCard = (data) => {
     return`
 
-        <div class="card col-xs-6 col-sm-6 col-md-4">
-            <div class="card-body">
+        <div class="card col-xs-6 col-sm-6 col-md-4 mt-1">
+            <div class="card-header">
                 <h5 class="card-title titleSection">${data.getName()}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+                <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${data.getId()}</li>
-                <li class="list-group-item">Email: ${data.getEmail()}</li>
-                <li class="list-group-item">Office Number: ${data.getGithub()}</li>
-            </ul>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${data.getId()}</li>
+                    <li class="list-group-item">Email: ${data.getEmail()}</li>
+                    <li class="list-group-item">Office Number: ${data.getGithub()}</li>
+                </ul>
+            </div>
         </div>
     ` 
 }
@@ -44,16 +47,18 @@ const EngineerCard = (data) => {
 const InternCard = (data) => {
     return`
 
-        <div class="card col-xs-6 col-sm-6 col-md-4">
-            <div class="card-body">
+        <div class="card col-xs-6 col-sm-6 col-md-4 mt-1">
+            <div class="card-header">
                 <h5 class="card-title titleSection">${data.getName()}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+                <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${data.getId()}</li>
-                <li class="list-group-item">Email: ${data.getEmail()}</li>
-                <li class="list-group-item">Office Number: ${data.getSchool()}</li>
-            </ul>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${data.getId()}</li>
+                    <li class="list-group-item">Email: ${data.getEmail()}</li>
+                    <li class="list-group-item">Office Number: ${data.getSchool()}</li>
+                </ul>
+            </div>
         </div>
 
     ` 
@@ -121,7 +126,7 @@ function generateMarkdown(data) {
     <header>
         <nav class="navbar navSection">
             <div class="container-fluid justify-content-center">
-                <span class="headingSection navbar-brand mb-0"><h1>My Team<h1></span>
+                <span class="headingSection navbar-brand mb-1"><h1>My Team<h1></span>
             </div>
         </nav>
     <header>

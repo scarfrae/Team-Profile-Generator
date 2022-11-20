@@ -5,3 +5,17 @@
 .headingSection {
     color: white;
 }
+
+.card-body {
+    background-color: #e63946;
+}
+
+.titleSection {
+    color: white
+}
+.card-subtitle {
+    color: white
+}
+.card-header {
+    background-color: #e63946;
+}
