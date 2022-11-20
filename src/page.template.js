@@ -9,7 +9,7 @@
 
 const ManagerCard = (data) => {
     return`
-    <div class="card col-xs-4">
+    <div class="card col-xs-4 col-md-4">
         <div class="card-body">
             <h5 class="card-title">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
@@ -23,7 +23,7 @@ const ManagerCard = (data) => {
 
 const EngineerCard = (data) => {
     return`
-    <div class="card" "col-xs-4">
+    <div class="card" "col-xs-4 col-md-4">
         <div class="card-body">
             <h5 class="card-title">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
@@ -37,7 +37,7 @@ const EngineerCard = (data) => {
 
 const InternCard = (data) => {
     return`
-    <div class="card" col-xs-4">
+    <div class="card" col-xs-4 col-md-4">
         <div class="card-body">
             <h5 class="card-title">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
@@ -61,8 +61,8 @@ let FilterArray = (EmployeeArray) => {
 var engineerCards = employeeEngineer.map(function(engineer) { 
     
     //take each engineer and send through html card function
+    // console.log('EngineerCard', EngineerCard(engineer))
     return EngineerCard(engineer);
-    console.log('EngineerCard', EngineerCard(engineer))
   });
   console.log('engineerCards', engineerCards)
   var managerCards = employeeManager.map(function(manager) { 
@@ -114,11 +114,13 @@ function generateMarkdown(data) {
         </nav>
     <header>
     <main>
-        ${EI}
+        <div class="container">
+            <div class="row">
+                ${EI}
+            </div>
+        </div>
+            
     <main>
-
-       
-${EI}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 </body>
