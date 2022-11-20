@@ -107,8 +107,8 @@ function generateMarkdown(data) {
 <body>
     <header>
         <nav class="navbar navSection">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1 py-5">My Team</span>
+            <div class="container-fluid justify-content-center">
+                <span class="headingSection navbar-brand mb-0"><h1>My Team<h1></span>
             </div>
         </nav>
     <header>
