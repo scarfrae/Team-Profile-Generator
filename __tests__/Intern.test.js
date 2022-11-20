@@ -17,15 +17,7 @@ describe("Intern", () => {
             const object = new Intern('Bob', idInput);
             expect(object.id).toEqual('0935');
         })
-        //one more in same style
     });
-        //for get office num etc.
-        // it("should also have a school property", () => {
-        //     const SchoolInput = 'Mount Vernon High School';
-        //     const object = new Intern('Bob', SchoolInput);
-        //     expect(object.school == 'Mount Vernon High School').toEqual(true);
-        // })
-        //one more in same style
     
 
 })

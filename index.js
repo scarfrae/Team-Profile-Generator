@@ -299,23 +299,4 @@ const FinishedTeam = (EmployeeInfoList) => {
     err ? console.error(err) : console.log('Success!')
     );
   
-//   function generateFile(questions){
-//     inquirer
-//     .prompt(questions)
-//     // .then((response) => console.log(response))
-//     .then((response) => writeToFile('./dist/README.md', response));
-//   // return readmeData;
-//   }
-  
-//   // TODO: Create a function to initialize app
-//   function init() {
-  
-//     generateFile(questions);
-  
-    
-//   }
-  
-//   // Function call to initialize app
-//   init();
-  
 }
