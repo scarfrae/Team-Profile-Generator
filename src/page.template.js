@@ -11,12 +11,14 @@ const ManagerCard = (data) => {
     return`
     <div class="card col-xs-6 col-sm-6 col-md-4">
         <div class="card-body">
-            <h5 class="card-title">${data.getName()}</h5>
+            <h5 class="card-title titleSection">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
-            <ul class="card-text"><li>ID: ${data.getId()}</li>
-            <li>Email: ${data.getEmail()}</li>
-            <li>Office Number: ${data.getOfficeNum()}</li></ul>
         </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${data.getId()}</li>
+            <li class="list-group-item">Email: ${data.getEmail()}</li>
+            <li class="list-group-item">Office Number: ${data.getOfficeNum()}</li>
+        </ul>
     </div>
     ` 
 }
@@ -25,12 +27,14 @@ const EngineerCard = (data) => {
     return`
     <div class="card col-xs-6 col-sm-6 col-md-4">
         <div class="card-body">
-            <h5 class="card-title">${data.getName()}</h5>
+            <h5 class="card-title titleSection">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
-            <ul class="card-text"><li>ID: ${data.getId()}</li>
-            <li>Email: ${data.getEmail()}</li>
-            <li>Office Number: ${data.getGithub()}</li></ul>
         </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${data.getId()}</li>
+            <li class="list-group-item">Email: ${data.getEmail()}</li>
+            <li class="list-group-item">Office Number: ${data.getGithub()}</li>
+        </ul>
     </div>
     ` 
 }
@@ -39,12 +43,14 @@ const InternCard = (data) => {
     return`
     <div class="card col-xs-6 col-sm-6 col-md-4">
         <div class="card-body">
-            <h5 class="card-title">${data.getName()}</h5>
+            <h5 class="card-title titleSection">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
-            <ul class="card-text"><li>ID: ${data.getId()}</li>
-            <li>Email: ${data.getEmail()}</li>
-            <li>Office Number: ${data.getSchool()}</li></ul>
         </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${data.getId()}</li>
+            <li class="list-group-item">Email: ${data.getEmail()}</li>
+            <li class="list-group-item">Office Number: ${data.getSchool()}</li>
+        </ul>
     </div>
     ` 
 }
@@ -78,9 +84,12 @@ let FilterArray = (EmployeeArray) => {
 
 
 // var EmployeeInformation = [];
-EmployeeInformation.push(engineerCards, managerCards, internCards);
+// EmployeeInformation.push(engineerCards, managerCards, internCards);
+managerCards.map(manager => EmployeeInformation.push(manager))
+engineerCards.map(engineer => EmployeeInformation.push(engineer))
+internCards.map(intern => EmployeeInformation.push(intern))
 // console.log('EmployeeInformation', EmployeeInformation);
-const newEmployeeInfoArray = EmployeeInformation.join('');
+const newEmployeeInfoArray = EmployeeInformation.join("");
 return newEmployeeInfoArray;
   
 // 3. take all arrays and put into <body> of final html template
