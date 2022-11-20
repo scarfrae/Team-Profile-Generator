@@ -9,49 +9,53 @@
 
 const ManagerCard = (data) => {
     return`
-    <div class="card col-xs-6 col-sm-6 col-md-4">
-        <div class="card-body">
-            <h5 class="card-title titleSection">${data.getName()}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+
+        <div class="card col-xs-6 col-sm-6 col-md-4">
+            <div class="card-body">
+                <h5 class="card-title titleSection">${data.getName()}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${data.getId()}</li>
+                <li class="list-group-item">Email: ${data.getEmail()}</li>
+                <li class="list-group-item">Office Number: ${data.getOfficeNum()}</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${data.getId()}</li>
-            <li class="list-group-item">Email: ${data.getEmail()}</li>
-            <li class="list-group-item">Office Number: ${data.getOfficeNum()}</li>
-        </ul>
-    </div>
     ` 
 }
 
 const EngineerCard = (data) => {
     return`
-    <div class="card col-xs-6 col-sm-6 col-md-4">
-        <div class="card-body">
-            <h5 class="card-title titleSection">${data.getName()}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+
+        <div class="card col-xs-6 col-sm-6 col-md-4">
+            <div class="card-body">
+                <h5 class="card-title titleSection">${data.getName()}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${data.getId()}</li>
+                <li class="list-group-item">Email: ${data.getEmail()}</li>
+                <li class="list-group-item">Office Number: ${data.getGithub()}</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${data.getId()}</li>
-            <li class="list-group-item">Email: ${data.getEmail()}</li>
-            <li class="list-group-item">Office Number: ${data.getGithub()}</li>
-        </ul>
-    </div>
     ` 
 }
 
 const InternCard = (data) => {
     return`
-    <div class="card col-xs-6 col-sm-6 col-md-4">
-        <div class="card-body">
-            <h5 class="card-title titleSection">${data.getName()}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+
+        <div class="card col-xs-6 col-sm-6 col-md-4">
+            <div class="card-body">
+                <h5 class="card-title titleSection">${data.getName()}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${data.getId()}</li>
+                <li class="list-group-item">Email: ${data.getEmail()}</li>
+                <li class="list-group-item">Office Number: ${data.getSchool()}</li>
+            </ul>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${data.getId()}</li>
-            <li class="list-group-item">Email: ${data.getEmail()}</li>
-            <li class="list-group-item">Office Number: ${data.getSchool()}</li>
-        </ul>
-    </div>
+
     ` 
 }
 var EmployeeInformation = [];
@@ -123,7 +127,7 @@ function generateMarkdown(data) {
     <header>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 ${EI}
             </div>
         </div>     
