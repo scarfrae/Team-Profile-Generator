@@ -144,7 +144,7 @@ let AddEngineer = () => {
     .prompt([
         {
             type: "input",
-            message: "What is the engineer's name?",
+            message: "Enter the name of the engineer?",
             name: "engineerName",
             // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
             validate: engineerInput => {
@@ -160,7 +160,7 @@ let AddEngineer = () => {
         },
         {
             type: "input",
-            message: "What is the engineer ID?",
+            message: "Enter the engineer ID?",
             name: "EngineerID",
             // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
             validate: IDInput => {
@@ -175,7 +175,7 @@ let AddEngineer = () => {
         },
         {
             type: "input",
-            message: "What is the engineer's email?",
+            message: "Enter the email of the Engineer?",
             name: "engineerEmail",
             // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
             validate: engineerEmailInput => {
