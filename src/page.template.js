@@ -9,7 +9,7 @@
 
 const ManagerCard = (data) => {
     return`
-    <div class="card" style="width: 18rem;">
+    <div class="card col-xs-4">
         <div class="card-body">
             <h5 class="card-title">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
@@ -23,7 +23,7 @@ const ManagerCard = (data) => {
 
 const EngineerCard = (data) => {
     return`
-    <div class="card" style="width: 18rem;">
+    <div class="card" "col-xs-4">
         <div class="card-body">
             <h5 class="card-title">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
@@ -37,7 +37,7 @@ const EngineerCard = (data) => {
 
 const InternCard = (data) => {
     return`
-    <div class="card" style="width: 18rem;">
+    <div class="card" col-xs-4">
         <div class="card-body">
             <h5 class="card-title">${data.getName()}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
@@ -113,6 +113,10 @@ function generateMarkdown(data) {
             </div>
         </nav>
     <header>
+    <main>
+        ${EI}
+    <main>
+
        
 ${EI}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
