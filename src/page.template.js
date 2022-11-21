@@ -17,7 +17,7 @@ const ManagerCard = (data) => {
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${data.getId()}</li>
-                    <li class="list-group-item">Email: ${data.getEmail()}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${data.getEmail()}">${data.getEmail()}</a></li>
                     <li class="list-group-item">Office Number: ${data.getOfficeNum()}</li>
                 </ul>
             </div>
@@ -36,8 +36,8 @@ const EngineerCard = (data) => {
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${data.getId()}</li>
-                    <li class="list-group-item">Email: ${data.getEmail()}</li>
-                    <li class="list-group-item">Office Number: https://github.com/${data.getGithub()}/</li>
+                    <li class="list-group-item">Email: <a href="mailto:${data.getEmail()}">${data.getEmail()}</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/${data.getGithub()}/" target="_blank">${data.getGithub()}</a></li>
                 </ul>
             </div>
         </div>
@@ -55,8 +55,8 @@ const InternCard = (data) => {
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${data.getId()}</li>
-                    <li class="list-group-item">Email: ${data.getEmail()}</li>
-                    <li class="list-group-item">Office Number: ${data.getSchool()}</li>
+                    <li class="list-group-item">Email: <a href="mailto:${data.getEmail()}" >${data.getEmail()}</a></li>
+                    <li class="list-group-item">School: ${data.getSchool()}</li>
                 </ul>
             </div>
         </div>
