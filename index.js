@@ -36,13 +36,15 @@ const AskManager = () => {
             type: "input",
             message: "What is the employee ID?",
             name: "ID",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // function to validate if number
+            //isNaN: is not a number therefore !isNaN is a number
+            // source: https://www.w3schools.com/jsref/jsref_isnan.asp
             validate: IDInput => {
-                if(IDInput){
+                if(!isNaN(IDInput)){
                     return true;
                 }
                 else{
-                    console.log("Please enter employee's ID!")
+                    console.log("\n Please enter a valid ID (positive number greater than 0)!")
                     return false;
                 }
             }
@@ -51,13 +53,15 @@ const AskManager = () => {
             type: "input",
             message: "What is the manager's email?",
             name: "managerEmail",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            //function to validate email
             validate: managerEmailInput => {
-                if(managerEmailInput){
+                // source: https://www.w3resource.com/javascript/form/email-validation.php
+                var mailValidate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(managerEmailInput.match(mailValidate)){
                     return true;
                 }
                 else{
-                    console.log("Please enter manager's email!")
+                    console.log("\n Please enter a valid email!");
                     return false;
                 }
             }
@@ -66,13 +70,14 @@ const AskManager = () => {
             type: "input",
             message: "What is the manager's office number?",
             name: "managerOfficeNum",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            //validates is name isn't true i.e is number
+            // source: https://www.w3schools.com/jsref/jsref_isnan.asp
             validate: managerOfficeNumInput => {
-                if(managerOfficeNumInput){
+                if(!isNaN(managerOfficeNumInput)){
                     return true;
                 }
                 else{
-                    console.log("Please enter a positive number greater than 0!")
+                    console.log("\n Please enter a valid Office Number (positive number greater than 0)!")
                     return false;
                 }
             }
@@ -123,12 +128,6 @@ const OptionMenu = () => {
 
 }
 
-//add engineer and add intern are really similar to addManager function
-//once engineer and intern occur call option menu
-//when selecting FinishedTeam write html file
-//invoke whichever one I export from page.template(creating html one) and pass EmployeeInfoList
-
-
 
 // WHEN I select the engineer option
 // THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
@@ -146,7 +145,7 @@ let AddEngineer = () => {
             type: "input",
             message: "Enter the name of the engineer?",
             name: "engineerName",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            //validate if input occurs
             validate: engineerInput => {
                 if(engineerInput){
                     return true;
@@ -162,13 +161,14 @@ let AddEngineer = () => {
             type: "input",
             message: "Enter the engineer ID?",
             name: "EngineerID",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // validate if is number
+            // source: https://www.w3schools.com/jsref/jsref_isnan.asp
             validate: IDInput => {
-                if(IDInput){
+                if(!isNaN(IDInput)){
                     return true;
                 }
                 else{
-                    console.log("Please enter engineer's ID!")
+                    console.log("Please enter a valid ID (positive number greater than 0)!")
                     return false;
                 }
             }
@@ -177,13 +177,15 @@ let AddEngineer = () => {
             type: "input",
             message: "Enter the email of the Engineer?",
             name: "engineerEmail",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // validate if email is inputed in correct format
             validate: engineerEmailInput => {
-                if(engineerEmailInput){
+                // source: https://www.w3resource.com/javascript/form/email-validation.php
+                var mailValidate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(engineerEmailInput.match(mailValidate)){
                     return true;
                 }
                 else{
-                    console.log("Please enter engineer's email!")
+                    console.log("Please enter a valid email!")
                     return false;
                 }
             }
@@ -192,7 +194,7 @@ let AddEngineer = () => {
             type: "input",
             message: "What is the engineer's github username?",
             name: "engineerGitHub",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // validate if input is entered
             validate: engineerGitHub => {
                 if(engineerGitHub){
                     return true;
@@ -220,7 +222,7 @@ let AddIntern = () => {
             type: "input",
             message: "What is the intern's name?",
             name: "internName",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // validate if input is recieved
             validate: internInput => {
                 if(internInput){
                     return true;
@@ -236,13 +238,14 @@ let AddIntern = () => {
             type: "input",
             message: "What is the intern's ID?",
             name: "internID",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // validate if is number
+            // source: https://www.w3schools.com/jsref/jsref_isnan.asp
             validate: IDInput => {
-                if(IDInput){
+                if(!isNaN(IDInput)){
                     return true;
                 }
                 else{
-                    console.log("Please enter intern's ID!")
+                    console.log("Please enter valid ID (positive number greater than 0)!")
                     return false;
                 }
             }
@@ -251,13 +254,15 @@ let AddIntern = () => {
             type: "input",
             message: "What is the intern's email?",
             name: "internEmail",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // validate if email is inputed in correct format
             validate: internEmailInput => {
-                if(internEmailInput){
+                // source: https://www.w3resource.com/javascript/form/email-validation.php
+                var mailValidate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(internEmailInput.match(mailValidate)){
                     return true;
                 }
                 else{
-                    console.log("Please enter intern's email!")
+                    console.log("Please enter valid email!")
                     return false;
                 }
             }
@@ -266,7 +271,7 @@ let AddIntern = () => {
             type: "input",
             message: "What is the intern's school?",
             name: "internSchool",
-            // validate: (Function) Receive the user input and answers hash. Should return true if the value is valid, and an error message (String) otherwise. If false is returned, a default error message is provided.
+            // validate if input retured
             validate: internSchool => {
                 if(internSchool){
                     return true;
