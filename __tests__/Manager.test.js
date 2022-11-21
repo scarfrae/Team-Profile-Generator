@@ -10,6 +10,7 @@ describe("Manager", () => {
         expect(object.name).toEqual('Bob');
         })
     });
+    //id test
     describe("ID", () => {
 
         it("should also have an id property", () => {
@@ -17,8 +18,9 @@ describe("Manager", () => {
             const object = new Manager('Bob', idInput);
             expect(object.id).toEqual('0935');
         })
-        //one more in same style
+    
     });
+    //email test
     describe("Email", () => {
         it("should also have an email property", () => {
             const emailinput = 'myemail@gmail.com';
@@ -26,7 +28,7 @@ describe("Manager", () => {
             expect(object.email).toBe('myemail@gmail.com');
         })
     });
-    //something wrong with this test
+    //office number test
     describe("Office Number", () => {
         it("should also have an office number property", () => {
             const officeNumInput = '0935';
@@ -34,13 +36,6 @@ describe("Manager", () => {
             expect(object.OfficeNumber).toBe('0935');
         })
     })
-        //for get office num etc.
-        // it("should also have an office number property", () => {
-        //     const OfficeNumInput = '0935';
-        //     const object = new Manager('Bob', OfficeNumInput);
-        //     expect(object.OfficeNumber == '0935').toEqual(true);
-        // })
-        //one more in same style
   
 
 })

@@ -11,6 +11,7 @@ describe("Employee", () => {
         expect(object.name).toEqual('Bob');
         })
     });
+    //test for id
     describe("ID", () => {
 
         it("should also have an id property", () => {
@@ -18,11 +19,7 @@ describe("Employee", () => {
             const object = new Employee('Bob', idInput);
             expect(object.id).toEqual('0935');
         })
-        //one more in same style
+        
     });
 
 })
-
-    // Testing the constructor
-
-// A test for each function

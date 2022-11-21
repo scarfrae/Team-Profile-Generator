@@ -1,6 +1,7 @@
 const Engineer = require("../lib/Engineer");
 
 describe("Engineer", () => {
+    //test for name
     describe("Initialization", () => {
         it("should return an object containing a name", () => {
             const nameInput = 'Bob';
@@ -9,6 +10,7 @@ describe("Engineer", () => {
         expect(object.name).toEqual('Bob');
         })
     });
+    //test for id
     describe("ID", () => {
 
         it("should also have an id property", () => {
@@ -16,17 +18,14 @@ describe("Engineer", () => {
             const object = new Engineer('Bob', idInput);
             expect(object.id).toEqual('0935');
         })
-        //one more in same style
+        
     });
-    //test for name
+    describe("Email", () => {
+        it("should also have an email property", () => {
+            const emailinput = 'myemail@gmail.com';
+            const object = new Engineer('Bob', 2, emailinput);
+            expect(object.email).toBe('myemail@gmail.com');
+        })
+    });
     
-        // //for github
-        // it("should also have an github property", () => {
-        //     const githubInput = '0935';
-        //     const object = new Engineer('Bob', githubInput);
-        //     expect(object.github == '0935').toEqual(true);
-        // })
-        //one more in same style
-   
-
 })
