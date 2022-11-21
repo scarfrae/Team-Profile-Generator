@@ -11,8 +11,8 @@ const ManagerCard = (data) => {
     return`
         <div class="card col-xs-6 col-sm-6 col-md-4 mt-1">
             <div class="card-header">
-                <h5 class="card-title titleSection">${data.getName()}</h5>
-                <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
+                <h3 class="card-title titleSection">${data.getName()}</h3>
+                <h5 class="card-subtitle mb-2"><span class="material-icons">manage_accounts</span> ${data.getRole()}</h5>
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -30,8 +30,8 @@ const EngineerCard = (data) => {
 
         <div class="card col-xs-6 col-sm-6 col-md-4 mt-1">
             <div class="card-header">
-                <h5 class="card-title titleSection">${data.getName()}</h5>
-                <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
+                <h3 class="card-title titleSection">${data.getName()}</h3>
+                <h5 class="card-subtitle mb-2"><span class="material-icons">engineering</span> ${data.getRole()}</h5>
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -49,8 +49,8 @@ const InternCard = (data) => {
 
         <div class="card col-xs-6 col-sm-6 col-md-4 mt-1">
             <div class="card-header">
-                <h5 class="card-title titleSection">${data.getName()}</h5>
-                <h6 class="card-subtitle mb-2">${data.getRole()}</h6>
+                <h3 class="card-title titleSection">${data.getName()}</h5>
+                <h5 class="card-subtitle mb-2"><span class="material-icons">school</span> ${data.getRole()}</h5>
             </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -121,6 +121,8 @@ function generateMarkdown(data) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     <header>
